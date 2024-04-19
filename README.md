@@ -1,12 +1,30 @@
-# The Movie DB Code Challenge
-Here is the information you will need:
+# React + TypeScript + Vite
 
-- The Movie DB documentation:
-  - https://developer.themoviedb.org/reference/intro/getting-started
-- Use this provided API Key:
-  - **`a9b856b302ef45f0fc28033e35b71d6a`**
-- Use the Discover endpoint to get a list of movies:
-  - https://developer.themoviedb.org/reference/discover-movie
-  - `https://api.themoviedb.org/3/discover/movie?api_key=api_key`
-- To get the images, you will need a separate url
-  - `http://image.tmdb.org/t/p/w500/your_poster_path`
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+
+Currently, two official plugins are available:
+
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+
+## Expanding the ESLint configuration
+
+If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+
+- Configure the top-level `parserOptions` property like this:
+
+```js
+export default {
+  // other rules...
+  parserOptions: {
+    ecmaVersion: 'latest',
+    sourceType: 'module',
+    project: ['./tsconfig.json', './tsconfig.node.json'],
+    tsconfigRootDir: __dirname,
+  },
+}
+```
+
+- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
+- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
+- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
