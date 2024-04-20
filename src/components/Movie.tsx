@@ -25,9 +25,9 @@ const Movie = ({ movie }: Props) => {
 
   return (
     <div key={movie.id} className="w-full flex flex-col md:w-[120px] md:items-start items-center">
-      <img className="md:w-[120px] md:h-[180px]" src={`http://image.tmdb.org/t/p/w500/${movie.backdrop_path}`} alt="placeholder" />
-      <h3 className="font-bold text-sm text-wrap">{movie.title}</h3>
-      {(details) && <h6 className="text-xs">{details.genres.map(({ name }) => name).join(", ")}</h6>}
+      <img className="w-full md:h-[180px] object-cover" src={`http://image.tmdb.org/t/p/w200/${movie.backdrop_path}`} alt="placeholder" />
+      <h3 className="font-bold text-xs text-wrap">{movie.title}</h3>
+      {(details) && <h6 className="text-[0.5rem]">{details.genres.map(({ name }) => name).join(", ")}</h6>}
     </div>
   );
 }
